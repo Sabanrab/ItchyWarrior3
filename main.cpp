@@ -5,13 +5,11 @@ using std::deque;
 #include <utility>
 using std::make_pair; using std::pair;
 #include "Location.h"
+#include "Character.h"
 
 int main(){
-	Location tester;
-	Location linker;
-	tester.name = "your mother";
-	linker.name = "dan's mother";
-	tester.destinations.push_back(make_pair(&linker,0));
-	cout << tester.destinations[0].first->name << endl;
+	NPC testerNPC;
+	testerNPC.name = "philip";
+	cout << testerNPC.name << endl;
 	return 0;
 }
