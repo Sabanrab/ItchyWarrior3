@@ -13,28 +13,59 @@ class Item;
 
 class Character{
 public:
-	string name;
-	string gender;
-	string hairColor;
-	string skinColor;
-	string bodyType;
-	Location* charLocation;
-	deque<Item> inventory;
+	string _name;
+	string _gender;
+	string _hairColor;
+	string _skinColor;
+	string _bodyType;
+	Location* _charLocation;
+	deque<Item> _inventory;
+
+	Character(string name, string gender, string hairColor, string skinColor\
+string bodyType, location* charLocation,deque<Item> inventory){
+	_name = name;
+	_gender = gender;
+	_hairColor = hairColor;
+	_skinColor = skinColor;
+	_bodyType = bodyType;
+	_charLocation = charLocation;
+	for(auto elem : inventory){
+		_inventory.push_back(elem);	
+	}
+}
+
+	Character() = default;
+
 };
 
 class Player : public Character {
 public:
     //these are the types of attributes each character has but we don't know
     //what they do yet
-    long intelligence = 0;  // 
-    long strength = 0;      //  
-    long relationship = 0;  // 
-    long charisma = 0;      // 
-    long positivity = 0;    //
-    long manipulation = 0;  // 
-    long reliability = 0;   //
-    long intimidation = 0;  // player can choose to go the intimidation route
-    long reputation = 0;    //
+    long _intelligence = 0;  // 
+    long _strength = 0;      //  
+    long _friendliness = 0;  // 
+    long _charisma = 0;      // 
+    long _positivity = 0;    //
+    long _manipulation = 0;  // 
+    long _reliability = 0;   //
+    long _intimidation = 0;  // player can choose to go the intimidation route
+    long _reputation = 0;    //
+
+	Player(string name, string gender, string hairColor, string skinColor,\
+string bodyType, location* charLocation, deque<Item> inventory, long intelligence,\
+long strength, long friendliness, long charisma, long positivity,\
+long manipulation, long reliability, long intimidation, long reputation) :
+	Character(name, gender, hairColor, skinColor, bodyType, charLocation, inventory),
+	_intelligence(intelligence),_strength(strength),_friendliness(friendliness)\
+,_charisma(charisma),_positivity(positivity),_manipulation(manipulation),_reliability(reliability),\
+_intimidation(intimidation),_repuation(reputation) {}
+
+
+	Player() = default;
+
+
+
 };
 
 class NPC :public Character {
