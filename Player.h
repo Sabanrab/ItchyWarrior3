@@ -11,6 +11,7 @@ using std::deque;
 #include "Quest.h"
 #include "Skill.h"
 #include "Location.h"
+#include "Attributes.h"
 
 class Player{
   string name;
@@ -23,6 +24,7 @@ class Player{
   deque<Skill> playerSkills;
   deque<NPC> companions;
   Location currentLocation;
+  Attributes playerAttributes;
 }
 
 #endif
