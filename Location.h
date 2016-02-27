@@ -9,14 +9,16 @@ using std::deque;
 using std::pair;
 
 #include "Character.h"
-
 class NPC;
+#include "Item.h"
+class Item;
 
 class Location{
 public:
 	string name;
 	deque<pair<Location*,bool>> destinations;
 	deque<NPC> NPCS;
+	deque<Item> objects;
 };
 
 #endif
