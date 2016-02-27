@@ -1,6 +1,6 @@
 #include <iostream>
 using std::cin; using std::cout; using std::endl;
-include <string>
+#include <string>
 using std::string;
 
 #include "Location.h"
