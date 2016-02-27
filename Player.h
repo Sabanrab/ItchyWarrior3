@@ -25,6 +25,6 @@ class Player{
   deque<NPC> companions;
   Location currentLocation;
   Attributes playerAttributes;
-}
+};
 
 #endif
