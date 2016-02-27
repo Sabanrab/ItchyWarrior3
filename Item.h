@@ -16,6 +16,7 @@ public:
 	string name;
 	string description;
 	bool pickUp; //if the item can be picked up or not
+	bool visable; //if the player can see this item
 	Location* itemLocation;
 };
 
