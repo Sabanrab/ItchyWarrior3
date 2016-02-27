@@ -30,8 +30,8 @@ class Player{
   void move (string dest,Location* start){
     bool valid = 0; //if the destination location is ok
     for(auto elem : location->destinations){
-      if(elem->name==dest){
-        
+      if(elem.first->name==dest && elem.second ==1){
+        playerLocation
       }
     }
   }
