@@ -38,6 +38,7 @@ string bodyType, Location* charLocation,deque<Item*> inventory){
 
 	Character() = default;
 
+/*
 	Character& operator=(Character& inputCharacter){
 		_name = inputCharacter._name;
 		_gender = inputCharacter._gender;
@@ -48,7 +49,7 @@ string bodyType, Location* charLocation,deque<Item*> inventory){
 		_inventory = inputCharacter._inventory;
 		return *this;
 	}
-
+*/
 };
 
 class Player : public Character {
@@ -71,7 +72,7 @@ public:
 		string skinColor,\
 		string bodyType, \
 		Location* charLocation, \
-		deque<Item> inventory, \
+		deque<Item*> inventory, \
 		long intelligence,\
 		long strength, \
 		long friendliness,\
@@ -108,13 +109,19 @@ public:
 class NPC :public Character {
 public:
 	long _opinion; //what the npc thinks about the player
-	NPC() = default;
-	deque<Speech*> convos;
+	NPC()=default;
+	deque<Speech*> _convos;
 //figure out how to initialize deques
 	NPC(string name, string gender, string hairColor, string skinColor,\
-string bodyType, Location* charLocation, deque<Item> inventory, long opinion, deque<Speech*> convos) :
-	Character(name, gender, hairColor, skinColor, bodyType, charLocation, inventory),
-_opinion(opinion) {}
+string bodyType, Location* charLocation, deque<Item*> inventory, long opinion) :
+	Character(name,\
+		gender, \
+		hairColor, \
+		skinColor, \
+		bodyType, \
+		charLocation, \
+		inventory),\
+		_opinion(opinion) {}
 
 
 

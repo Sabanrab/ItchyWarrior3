@@ -15,12 +15,12 @@ class Item;
 
 class Location{
 public:
-	string name;
-	string description;
-	bool visited = 0; //if the player has already visited this destination
-	deque<pair<Location*,bool>> destinations;
-	deque<NPC*> NPCS;
-	deque<Item*> objects;
+	string _name;
+	string _description;
+	bool _visited = 0; //if the player has already visited this destination
+	deque<pair<Location*,bool>> _destinations;
+	deque<NPC*> _NPCS;
+	deque<Item*> _objects;
 };
 
 #endif

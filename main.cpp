@@ -15,11 +15,11 @@ int main(){
 	Item testerItem;
 	Item testerItem9;
 	Speech testerSpeech;
-	deque<Item> stuff = {};
+	deque<Item*> stuff = {};
 	Item thing;
 	thing._name = "YES IT IS";
-	stuff.push_back(thing);
-	Character Gry = Character("gary", "f","bule","prapel","fat as fuck",&testerPlace,stuff);
+	stuff.push_back(&thing);
+	Character* Gry = new Character("gary", "f","bule","prapel","fat as fuck",&testerPlace,stuff);
 
 //	cout << Gry._name << endl << Gry._gender << endl << Gry._hairColor << endl << Gry._skinColor\
 //<< endl << Gry._bodyType << endl;

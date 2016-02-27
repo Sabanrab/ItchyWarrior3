@@ -13,11 +13,11 @@ class Location;
 
 class Item {
 public:
-	string name;
-	string description;
-	bool pickUp; //if the item can be picked up or not
-	bool visable; //if the player can see this item
-	Location* itemLocation;
+	string _name;
+	string _description;
+	bool _pickUp; //if the item can be picked up or not
+	bool _visable; //if the player can see this item
+	Location* _itemLocation;
 };
 
 #endif
