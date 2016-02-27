@@ -14,16 +14,16 @@ using std::deque;
 #include "Attributes.h"
 
 class Player{
-  string name;
-  string gender;
-  string hairColor;
-  string body;
-  string skinColor;
+  string name; 
+  string gender; //m or f
+  string hairColor; //from hairColor deque
+  string body; //from bodyType deque
+  string skinColor; //from skinColor deque
   deque<Item> inventory;
   deque<Quest> questDeque;
   deque<Skill> playerSkills;
   deque<NPC> companions;
-  Location currentLocation;
+  Location* currentLocation;
   Attributes playerAttributes;
   Clothing playerClothing;
 };
