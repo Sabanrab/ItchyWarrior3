@@ -15,6 +15,7 @@ using std::deque;
 
 class Location{
     string name;
+    string description;
     string status; //in or out
     bool visited = 0; //if player has been here already or not
     deque<pair<location*,bool>> destinations; //bool true if path open
