@@ -16,6 +16,7 @@ using std::deque;
 class Location{
     string name;
     string status; //in or out
+    bool visited = 0; //if player has been here already or not
     location* north;
     location* south;
     location* east;
