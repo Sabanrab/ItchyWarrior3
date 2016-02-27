@@ -7,9 +7,9 @@ using std::string;
 using std::deque;
 
 #include "NPC.h"
-#include "Items.h"
-#include "Quests.h"
-#include "Skilss.h"
+#include "Item.h"
+#include "Quest.h"
+#include "Skill.h"
 #include "Location.h"
 
 class Player{
@@ -18,9 +18,9 @@ class Player{
   string hairColor;
   string body;
   string skinColor;
-  deque<Items> inventory;
-  deque<Quests> questDeque;
-  deque<Skills> playerSkills;
+  deque<Item> inventory;
+  deque<Quest> questDeque;
+  deque<Skill> playerSkills;
   deque<NPC> companions;
   Location currentLocation;
 }
