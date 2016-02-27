@@ -22,8 +22,6 @@ public:
 	deque<Item> inventory;
 };
 
-
-
 class Player : public Character {
 public:
     //these are the types of attributes each character has but we don't know
