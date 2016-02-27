@@ -25,6 +25,10 @@ class Player{
   Location* currentLocation;
   Attributes playerAttributes;
   Clothing playerClothing;
+  
+  void move (string destination,Location * start){ //here
+    if(start->)
+  }
 };
 
 #endif
