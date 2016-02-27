@@ -22,7 +22,6 @@ class NPC{
   string skinColor;
   long opinion = 0;
   deque<Item> inventory;
-  deque<Skill> NPCSkills;
   deque<Quest> NPCQuests;
   Location* currentLocation;
   Attributes NPCAttributes;
