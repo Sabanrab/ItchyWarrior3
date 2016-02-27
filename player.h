@@ -13,6 +13,7 @@ class Player{
   deque<Items> inventory;
   deque<Quests> questDeque;
   deque<Skills> playerSkills;
+  deque<NPC> companions;
   Location currentLocation;
 }
 
