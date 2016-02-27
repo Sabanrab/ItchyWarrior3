@@ -1,8 +1,24 @@
 #ifndef NPC_H
 #define NPC_H
 
-class NPC{
+#include<string>
+using std::string;
+#include<deque>
+using std::deque;
 
+class NPC{
+  string name;
+  string gender;
+  string hairColor;
+  string body;
+  string skinColor;
+  long opinion = 0;
+  deque<Item> inventory;
+  deque<Skill> NPCSkills;
+  deque<Quest> NPCQuests;
+  Location currentLocation;
+  Attributes NPCAttributes;
+  Clothing NPCClothing;
 };
 
 #endif /* NPC_H */
