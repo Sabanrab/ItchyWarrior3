@@ -10,9 +10,9 @@ class Player{
   string hairColor;
   string body;
   string skinColor;
-  long relationship;
   deque<Items> inventory;
   deque<Quests> questDeque;
+  deque<Skills> playerSkills;
   Location currentLocation;
 }
 
