@@ -17,7 +17,7 @@ class Location{
     string name;
     string status; //in or out
     bool visited = 0; //if player has been here already or not
-    deque<location*> destinations;
+    deque<pair<location*,bool>> destinations; //bool true if path open
     deque<NPC> NPCS;
     deque<Object> objects;
     deque<Event> events;
