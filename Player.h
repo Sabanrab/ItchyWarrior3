@@ -26,8 +26,14 @@ class Player{
   Attributes playerAttributes;
   Clothing playerClothing;
   
-  void move (string destination,Location * start){ //here
-    if(start->)
+  //dest is requested destination
+  void move (string dest,Location* start){
+    bool valid = 0; //if the destination location is ok
+    for(auto elem : location->destinations){
+      if(elem->name==dest){
+        
+      }
+    }
   }
 };
 
