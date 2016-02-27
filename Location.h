@@ -17,14 +17,7 @@ class Location{
     string name;
     string status; //in or out
     bool visited = 0; //if player has been here already or not
-    location* north;
-    location* south;
-    location* east;
-    location* west;
-    location* northEast;
-    location* northWest;
-    location* southEast; 
-    location* southWest;
+    deque<location*> destinations;
     deque<NPC> NPCS;
     deque<Object> objects;
     deque<Event> events;
