@@ -24,7 +24,7 @@ class NPC{
   deque<Item> inventory;
   deque<Skill> NPCSkills;
   deque<Quest> NPCQuests;
-  Location currentLocation;
+  Location* currentLocation;
   Attributes NPCAttributes;
   Clothing NPCClothing;
 };
