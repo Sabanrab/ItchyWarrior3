@@ -20,6 +20,11 @@ public:
 
 class Player : public Character {
 public:
+
+
+
+
+
 	
 };
 
