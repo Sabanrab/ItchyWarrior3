@@ -6,6 +6,14 @@ using std::string;
 #include<deque>
 using std::deque;
 
+#include "NPC.h"
+#include "Item.h"
+#include "Quest.h"
+#include "Skill.h"
+#include "Location.h"
+#include "Attributes.h"
+#include "Clothing.h"
+
 class NPC{
   string name;
   string gender;
