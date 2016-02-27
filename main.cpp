@@ -10,6 +10,10 @@ using std::make_pair; using std::pair;
 int main(){
 	NPC testerNPC;
 	testerNPC.name = "philip";
-	cout << testerNPC.name << endl;
+	Location testerPlace;
+	Item testerItem;
+	testerItem.name = "sword";
+	testerPlace.objects.push_back(testerItem);
+	cout << testerPlace.objects[0].name << endl;
 	return 0;
 }
