@@ -6,6 +6,7 @@ using std::string;
 
 class Item{
     string name;
+    bool pickUp = 0; //can the item be picked up
 };
 
 
