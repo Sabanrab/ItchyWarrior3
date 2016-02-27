@@ -16,9 +16,11 @@ class Item;
 class Location{
 public:
 	string name;
+	string description;
+	bool visited = 0; //if the player has already visited this destination
 	deque<pair<Location*,bool>> destinations;
-	deque<NPC> NPCS;
-	deque<Item> objects;
+	deque<NPC*> NPCS;
+	deque<Item*> objects;
 };
 
 #endif
