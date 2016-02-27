@@ -24,6 +24,10 @@ class Location{
     location* northWest;
     location* southEast; 
     location* southWest;
+    deque<NPC> NPCS;
+    deque<Object> objects;
+    deque<Event> events;
+    deque<Item> items;
 };
 
 #endif /* LOCATION_H */
