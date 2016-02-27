@@ -3,7 +3,7 @@
 
 class Quest.h{
   
-}
+};
 
 
 #endif /* QUEST_H */
