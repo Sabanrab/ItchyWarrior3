@@ -10,6 +10,8 @@ using std::deque;
 class Location;
 #include "Item.h"
 class Item;
+#include "Speech.h"
+class Speech;
 
 class Character{
 public:
@@ -21,8 +23,8 @@ public:
 	Location* _charLocation;
 	deque<Item> _inventory;
 
-	Character(string name, string gender, string hairColor, string skinColor\
-string bodyType, location* charLocation,deque<Item> inventory){
+	Character(string name, string gender, string hairColor, string skinColor,\
+string bodyType, Location* charLocation,deque<Item> inventory){
 	_name = name;
 	_gender = gender;
 	_hairColor = hairColor;
@@ -53,13 +55,13 @@ public:
     long _reputation = 0;    //
 
 	Player(string name, string gender, string hairColor, string skinColor,\
-string bodyType, location* charLocation, deque<Item> inventory, long intelligence,\
+string bodyType, Location* charLocation, deque<Item> inventory, long intelligence,\
 long strength, long friendliness, long charisma, long positivity,\
 long manipulation, long reliability, long intimidation, long reputation) :
 	Character(name, gender, hairColor, skinColor, bodyType, charLocation, inventory),
 	_intelligence(intelligence),_strength(strength),_friendliness(friendliness)\
 ,_charisma(charisma),_positivity(positivity),_manipulation(manipulation),_reliability(reliability),\
-_intimidation(intimidation),_repuation(reputation) {}
+_intimidation(intimidation),_reputation(reputation) {}
 
 
 	Player() = default;
@@ -70,7 +72,17 @@ _intimidation(intimidation),_repuation(reputation) {}
 
 class NPC :public Character {
 public:
-	long opinion; //what the npc thinks about the player
+	long _opinion; //what the npc thinks about the player
+	NPC() = default;
+	deque<Speech*> convos;
+//figure out how to initialize deques
+	NPC(string name, string gender, string hairColor, string skinColor,\
+string bodyType, Location* charLocation, deque<Item> inventory, long opinion, deque<Speech*> convos) :
+	Character(name, gender, hairColor, skinColor, bodyType, charLocation, inventory),
+_opinion(opinion) {}
+
+
+
 };
 
 
