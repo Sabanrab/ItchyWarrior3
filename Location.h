@@ -8,12 +8,15 @@ using std::deque;
 #include <utility>
 using std::pair;
 
+#include "Character.h"
+
+class NPC;
+
 class Location{
 public:
 	string name;
 	deque<pair<Location*,bool>> destinations;
-
-	Location() = default;
+	deque<NPC> NPCS;
 };
 
 #endif
