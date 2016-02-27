@@ -26,5 +26,4 @@ class Location{
     location* southWest;
 };
 
-
 #endif /* LOCATION_H */
