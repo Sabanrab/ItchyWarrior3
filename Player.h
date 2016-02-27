@@ -21,7 +21,6 @@ class Player{
   string skinColor; //from skinColor deque
   deque<Item> inventory;
   deque<Quest> questDeque;
-  deque<Skill> playerSkills;
   deque<NPC> companions;
   Location* currentLocation;
   Attributes playerAttributes;
