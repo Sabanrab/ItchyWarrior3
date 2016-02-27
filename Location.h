@@ -12,6 +12,8 @@ class Location{
 public:
 	string name;
 	deque<pair<Location*,bool>> destinations;
+
+	Location() = default;
 };
 
 #endif
