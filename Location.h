@@ -22,7 +22,7 @@ class Location{
     location* west;
     location* northEast;
     location* northWest;
-    location* southEast;
+    location* southEast; 
     location* southWest;
 };
 
