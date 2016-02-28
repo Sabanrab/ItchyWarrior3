@@ -27,23 +27,9 @@ int main(){
 	Item pitchaxe("pitchaxe", "a heavy axe to be thrown by a pitcher", 1,1, &startLoc);
 	startLoc._objects.push_back(&pitchaxe);
 
-/*
-	//actions
-	dan.move("hell");
-	dan.pickUp("pickfork");
-	dan.examine("pickfork");
-	dan.move("start loc");
-	dan.examine("pitchaxe");
-	dan.move("hell");
-	dan.lookAround();
-*/	
-
-
-
-
 	deque<string> move = {"move","go"};
-	deque<string> pickUp = {"pick up"};
-	deque<string> examine = {"examine"};
+	deque<string> pickUp = {"pick","pickup"};
+	deque<string> examine = {"examine","look at"};
 	deque<string> lookAround = {"look around"};
 	string input; //the command that the user gives
 	//deque of string deques holds possible commands
@@ -95,11 +81,26 @@ int main(){
 				cout << "Invalid item name." << endl;
 			}
 		} 
-		else if(todo == 2){
+		else if(todo == 2){//perform examine action
+			for(auto elem : pl._charLocation->_objects){ 
+				if(input.find(elem->_name)!=string::npos && success == 0){
+					pl.examine(elem->_name); 
+					success = 1;
+				}
+			}
+			for(auto elem : pl._inventory){ 
+				if(input.find(elem->_name)!=string::npos && success == 0){
+					pl.examine(elem->_name); 
+					success = 1;
+				}
+			}
+			if(success == 0){
+				cout << "Invalid item name." << endl;
+			}
 
 		} 
-		else if(todo == 3){
-
+		else if(todo == 3){//perform look around action
+			pl.lookAround();
 		} 
 		cout << endl;
 	}
