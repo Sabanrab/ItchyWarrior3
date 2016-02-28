@@ -10,10 +10,12 @@ using std::make_pair; using std::pair;
 
 int main(){
 	//making locations
-	Location heaven("heaven");
-	heaven._description = "stratin the game";
-	Location hell("hell");
-	hell._description = "fiery abyss mother fucker";
+	Location heaven("Heaven");
+	heaven._description = "There is a vast expanse of clouds. Have you ever really wondered \
+why heaven is portrayed as having clouds? I have. I guess you knew that, considering I am writing \
+it right now.";
+	Location hell("Hell");
+	hell._description = "It's a fiery abyss mother fucker.";
 	//making paths
 	Location startLocation("");
 	startLocation._destinations.push_back(make_pair(&heaven,1));
@@ -27,9 +29,14 @@ int main(){
 	Player pl("Dan","f","brown","white","fat",&startLocation,danStuff,0,0,0,0,0,0,0,0,0);
 	//Building NPCs
 	NPC god("God", "m", "white","really fucking white.. like he's never seen the sun or something",\
-"Kinda pudgy but you have a feeling he's hiding some strength",&heaven,godStuff,0);
+"Kinda pudgy but you have a feeling he's hiding some strength",&heaven,godStuff,0,"There is an old man \
+standing over in the corner. You know, white hair, wrinkly skin, and white as fuck. \
+I guess it's God, considering this is heaven. Who the hell did you think was going to be here?");
 	NPC satan("Satan", "m", "brown","skin so red you feel like making a joke about it","ripped af",&hell,\
-satanStuff, 1);
+satanStuff, 1,"Satan is bad af. And ripped. His friends even call him the brown bastard. You know, due to \
+his bastardlyness. Stop staring, what are you insane??");
+	heaven._NPCS.push_back(&god);
+	hell._NPCS.push_back(&satan);
 	//creating Items
 	Item pickfork("pickfork", "pickfork. minors use it to pick their teetch", "under Satan",1,1, &hell);
 	hell._objects.push_back(&pickfork);
@@ -50,7 +57,7 @@ satanStuff, 1);
 	bool success;
 	
 	cout<<endl<<"Welcome to ItchyWarrior3: part I"<< endl << endl;
-	pl.move("heaven");
+	pl.move("Heaven");
 
 	//main game loop. will continue until saved or exited
 	for(;;){ 

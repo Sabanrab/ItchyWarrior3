@@ -24,7 +24,7 @@ void Player::move (string input){
 			_charLocation = elem.first;
                         cout<< "***" << elem.first->_name << "***"<<endl;
 			if(elem.first->_visited==0){
-				cout << elem.first->_description << endl;	
+				lookAround();
 				elem.first->_visited=1;
 			}
 		}
@@ -89,9 +89,12 @@ void Player::examine(string input){
 	
 //this needs to be expanded to describe the items that are in a location
 void Player::lookAround(){
-	cout << _charLocation->_description << endl;	
+	cout << _charLocation->_description << " ";	
 	for(auto elem : _charLocation->_objects){
-		cout << "You see a " << elem->_name << " " << elem->_subLoc << "." <<  endl;
+		cout << "You see a " << elem->_name << " " << elem->_subLoc << ". ";
+	}
+	for(auto elem : _charLocation->_NPCS){
+		cout << elem->_description << endl;
 	}
 }
 
