@@ -21,8 +21,15 @@ int main(){
 	pair<Location*,bool> destPair = make_pair (&hell,1);
 	heaven._destinations.push_back(destPair);
 	//building Player
-	deque<Item*> stuff;
-	Player pl("Dan","f","brown","white","fat",&startLocation,stuff,0,0,0,0,0,0,0,0,0);
+	deque<Item*> danStuff;
+	deque<Item*> godStuff;
+	deque<Item*> satanStuff;
+	Player pl("Dan","f","brown","white","fat",&startLocation,danStuff,0,0,0,0,0,0,0,0,0);
+	//Building NPCs
+	NPC god("God", "m", "white","really fucking white.. like he's never seen the sun or something",\
+"Kinda pudgy but you have a feeling he's hiding some strength",&heaven,godStuff,0);
+	NPC satan("Satan", "m", "brown","skin so red you feel like making a joke about it","ripped af",&hell,\
+satanStuff, 1);
 	//creating Items
 	Item pickfork("pickfork", "pickfork. minors use it to pick their teetch", "under Satan",1,1, &hell);
 	hell._objects.push_back(&pickfork);
