@@ -6,6 +6,7 @@ using std::deque;
 using std::make_pair; using std::pair;
 #include "Location.h"
 #include "Character.h"
+#include "Item.h"
 
 int main(){
 	NPC testerNPC;

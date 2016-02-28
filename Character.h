@@ -7,11 +7,11 @@ using std::string;
 using std::deque;
 
 #include "Location.h"
-class Location;
+//class Location;
 #include "Item.h"
-class Item;
+//class Item;
 #include "Speech.h"
-class Speech;
+//class Speech;
 
 class Character{
 public:
@@ -38,18 +38,6 @@ string bodyType, Location* charLocation,deque<Item*> inventory){
 
 	Character() = default;
 
-/*
-	Character& operator=(Character& inputCharacter){
-		_name = inputCharacter._name;
-		_gender = inputCharacter._gender;
-		_hairColor = inputCharacter._hairColor;
-		_skinColor = inputCharacter._skinColor;
-		_bodyType = inputCharacter._bodyType;
-		_charLocation = inputCharacter._charLocation;
-		_inventory = inputCharacter._inventory;
-		return *this;
-	}
-*/
 };
 
 class Player : public Character {
@@ -101,8 +89,7 @@ public:
 
 
 	Player() = default;
-
-
+	virtual void move(string, Player*, Location*);
 
 };
 
@@ -127,5 +114,17 @@ string bodyType, Location* charLocation, deque<Item*> inventory, long opinion) :
 
 };
 
+
+//pl is pointer to the player, cur is current location
+//input is where the player is trying to go
+void Player::move (string input, Player* pl, Location* cur){
+	cur->_name;
+	for(auto elem : cur->_destinations){
+		if((elem.first->_name == input) && (elem.second == 1)){
+			pl->_charLocation = elem.first;
+			// add in cout statemets
+		}
+	}
+}
 
 #endif

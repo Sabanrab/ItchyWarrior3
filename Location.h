@@ -8,8 +8,10 @@ using std::deque;
 #include <utility>
 using std::pair;
 
-#include "Character.h"
+//#include "Character.h"
+class Character;
 class NPC;
+
 #include "Item.h"
 class Item;
 
