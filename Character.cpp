@@ -90,6 +90,9 @@ void Player::examine(string input){
 //this needs to be expanded to describe the items that are in a location
 void Player::lookAround(){
 	cout << _charLocation->_description << endl;	
+	for(auto elem : _charLocation->_objects){
+		cout << "You see a " << elem->_name << " " << elem->_subLoc << "." <<  endl;
+	}
 }
 
 

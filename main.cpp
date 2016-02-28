@@ -10,22 +10,24 @@ using std::make_pair; using std::pair;
 
 int main(){
 	//making locations
-	Location startLoc("heaven");
-	startLoc._description = "stratin the game";
+	Location heaven("heaven");
+	heaven._description = "stratin the game";
 	Location hell("hell");
 	hell._description = "fiery abyss mother fucker";
 	//making paths
-	hell._destinations.push_back(make_pair (&startLoc,1));
+	Location startLocation("");
+	startLocation._destinations.push_back(make_pair(&heaven,1));
+	hell._destinations.push_back(make_pair (&heaven,1));
 	pair<Location*,bool> destPair = make_pair (&hell,1);
-	startLoc._destinations.push_back(destPair);
+	heaven._destinations.push_back(destPair);
 	//building Player
 	deque<Item*> stuff;
-	Player pl("Dan","f","brown","white","fat",&startLoc,stuff,0,0,0,0,0,0,0,0,0);
+	Player pl("Dan","f","brown","white","fat",&startLocation,stuff,0,0,0,0,0,0,0,0,0);
 	//creating Items
-	Item pickfork("pickfork", "pickfork. minors use it to pick their teetch", 1,1, &hell);
+	Item pickfork("pickfork", "pickfork. minors use it to pick their teetch", "under Satan",1,1, &hell);
 	hell._objects.push_back(&pickfork);
-	Item pitchaxe("pitchaxe", "a heavy axe to be thrown by a pitcher", 1,1, &startLoc);
-	startLoc._objects.push_back(&pitchaxe);
+	Item pitchaxe("pitchaxe", "a heavy axe to be thrown by a pitcher", "on a fucking cloud",1,1, &heaven);
+	heaven._objects.push_back(&pitchaxe);
 
 	deque<string> move = {"move","go"};
 	deque<string> pickUp = {"pick","pickup"};
@@ -39,6 +41,10 @@ int main(){
 	long actionNum;
 	long todo;
 	bool success;
+	
+	cout<<endl<<"Welcome to ItchyWarrior3: part I"<< endl << endl;
+	pl.move("heaven");
+
 	//main game loop. will continue until saved or exited
 	for(;;){ 
 		success = 0; //used in all actions to determine if action was completed
