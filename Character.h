@@ -89,10 +89,10 @@ public:
 
 
 	Player() = default;
-	void move(string, Player*, Location*);
-	void pickUp(string, Player*, Location*);
-	void examine(string,Player*, Location*);
-	
+	void move(string);
+	void pickUp(string);
+	void examine(string);
+	void lookAround();
 };
 
 class NPC :public Character {
@@ -115,8 +115,6 @@ string bodyType, Location* charLocation, deque<Item*> inventory, long opinion) :
 
 
 };
-
-
 
 #endif
 
