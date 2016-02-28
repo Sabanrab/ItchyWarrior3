@@ -27,6 +27,7 @@ void Player::move (string input, Player* pl, Location* cur){
                         cout<< "***" << elem.first->_name << "***"<<endl;
 			if(elem.first->_visited==0){
 				cout << elem.first->_description << endl;	
+				elem.first->_visited=1;
 			}
 		}
 		else{
@@ -66,11 +67,28 @@ void Player::pickUp (string input, Player* pl, Location* cur){
 //item name parameter is the item we are examining
 //pl is the player's address so we can find out info on him
 //loc is the current location
-void Player::examine(string item, Player* pl, Location* cur){
-	
-	
-	
+void Player::examine(string input, Player* pl, Location* cur){
+	bool printed = 0;
+	//loop for items in location
+	for(auto elem : cur->_objects){
+		if((elem->_name == input) && elem->_visable == 1){
+			cout << elem->_description << endl;
+			printed = 1;
+		}
+	}
+	for(auto elem : pl->_inventory){
+		if(elem->_name == input){
+			cout << elem->_description << endl;
+			printed = 1;
+		}
 
-
+	}
+	if(printed == 0){
+		cout << "This item does not exist." << endl;
+	}
 }
+	
+
+
+
 

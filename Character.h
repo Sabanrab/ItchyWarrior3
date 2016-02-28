@@ -92,6 +92,7 @@ public:
 	void move(string, Player*, Location*);
 	void pickUp(string, Player*, Location*);
 	void examine(string,Player*, Location*);
+	
 };
 
 class NPC :public Character {
