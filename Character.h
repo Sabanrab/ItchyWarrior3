@@ -98,11 +98,13 @@ public:
 class NPC :public Character {
 public:
 	long _opinion; //what the npc thinks about the player
+	string _description;
 	NPC()=default;
 	deque<Speech*> _convos;
-//figure out how to initialize deques
+//we are probably just going to keep all of the individual npc traits empty. we don't feel
+//like changing all of the code to remove the different data members
 	NPC(string name, string gender, string hairColor, string skinColor,\
-string bodyType, Location* charLocation, deque<Item*> inventory, long opinion) :
+string bodyType, Location* charLocation, deque<Item*> inventory, long opinion, string descript) :
 	Character(name,\
 		gender, \
 		hairColor, \
@@ -110,7 +112,8 @@ string bodyType, Location* charLocation, deque<Item*> inventory, long opinion) :
 		bodyType, \
 		charLocation, \
 		inventory),\
-		_opinion(opinion) {}
+		_opinion(opinion),
+		_description(descript) {}
 
 
 
