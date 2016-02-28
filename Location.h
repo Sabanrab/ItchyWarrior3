@@ -23,6 +23,11 @@ public:
 	deque<pair<Location*,bool>> _destinations;
 	deque<NPC*> _NPCS;
 	deque<Item*> _objects;
+
+	Location(string nm){
+		_name = nm;
+	}
+
 };
 
 #endif

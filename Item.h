@@ -18,6 +18,14 @@ public:
 	bool _pickUp; //if the item can be picked up or not
 	bool _visable; //if the player can see this item
 	Location* _itemLocation;
+
+	Item(string nm,string description, bool pU, bool vis, Location* loc){
+		_name = nm;
+		_description = description;
+		_pickUp = pU;
+		_visable = vis;
+		_itemLocation = loc;
+	}
 };
 
 #endif

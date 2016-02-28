@@ -89,8 +89,9 @@ public:
 
 
 	Player() = default;
-	virtual void move(string, Player*, Location*);
-
+	void move(string, Player*, Location*);
+	void pickUp(string, Player*, Location*);
+	void examine(string,Player*, Location*);
 };
 
 class NPC :public Character {
@@ -115,16 +116,6 @@ string bodyType, Location* charLocation, deque<Item*> inventory, long opinion) :
 };
 
 
-//pl is pointer to the player, cur is current location
-//input is where the player is trying to go
-void Player::move (string input, Player* pl, Location* cur){
-	cur->_name;
-	for(auto elem : cur->_destinations){
-		if((elem.first->_name == input) && (elem.second == 1)){
-			pl->_charLocation = elem.first;
-			// add in cout statemets
-		}
-	}
-}
 
 #endif
+
