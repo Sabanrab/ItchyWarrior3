@@ -74,7 +74,10 @@ his bastardlyness. Stop staring, what are you insane??");
 				}
 			}
 		}		
-		if(todo == -1){ //if no viable action was found
+		if(input=="clear"){
+			cout << string(100,'\n');
+		}
+		else if(todo == -1){ //if no viable action was found
 			cout << "Invalid command." << endl;			
 		}
 		else if(todo == 0){ //perform action move
